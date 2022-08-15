@@ -8,21 +8,109 @@
   padding: 16px;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+body {
+  padding-top: 80px;
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+.search-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgb(108, 158, 216);
+  z-index: 10;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-btn {
+  width: 80px;
+  color: black;
+  background: rgb(233, 169, 230);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:hover {
+  color: rgb(36, 36, 36);
+  background: rgb(241, 232, 100);
+  transform: scale(1.07);
+}
+
+.form-input,
+.form-btn {
+  height: 35px;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-input {
+  width: 200px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.photo-card {
+  max-width: 300px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.photo-card:hover {
+  box-shadow: 0px 0px 5px 5px rgb(160, 152, 152);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.photo__link {
+  display: block;
+  height: 80%;
+  text-decoration: none;
+}
+
+.photo__link:hover {
+  cursor: zoom-in;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 25%;
+
+  font-size: 14px;
+  color: rgb(27, 34, 31);
+}
+
+.wrapper-load {
+  padding: 5px 0 15px;
+  text-align: center;
+}
+
+.is-hidden {
+  display: none;
 }
